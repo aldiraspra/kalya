@@ -73,8 +73,8 @@
   }
   
   #card-front {
-      background-color: #FF5555;
-      background-image: linear-gradient(to bottom, #FF5555 0%, #FF7777 100%);
+      background-color: #81839f;
+      background-image: linear-gradient(to bottom, #81839f 0%, #81839f 100%);
       transform-origin: left;
       transition:  transform 1s linear;
       position: relative;
@@ -88,7 +88,7 @@
     position: absolute;
     bottom: 1em;
     right: -12px;
-    background: #F44;
+    background: #81839f;
     color: #FFF;
     font-style: italic;
     font-weight: bold;
@@ -101,7 +101,7 @@
   
   #card-front button:hover,
   #card-front button:focus {
-    background: #F22;
+    background: #81839f;
   }
   
   #close {

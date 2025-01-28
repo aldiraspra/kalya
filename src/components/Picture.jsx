@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { picture} from '../assets';
+import foto1 from '../assets/1.jpg';
+import foto2 from '../assets/2.jpg';
+import foto3 from '../assets/3.jpg';
+import foto4 from '../assets/4.jpg';
 import { Link } from 'react-router-dom'; 
 import SectionWrapper from './SectionWrapper';
 // Add your own images by putting them in the assets folder and import them.
 const images = [
- picture,
- picture,
- picture,
- picture,
+  foto1,
+  foto2,
+  foto3,
+  foto4,
 
 ];
 function Picture() {
@@ -22,7 +25,7 @@ function Picture() {
     <SectionWrapper>
       <Link to="/card">
         <p className="absolute text-4xl font-bold text-customBlue inset-0 flex justify-center items-center text-center transform rotate-6 cursor-pointer">
-          You're Getting Old! :P
+        💓
         </p>
       </Link>
       {!allImagesLoaded && (

@@ -36,24 +36,25 @@ function Card() {
       <div id="card" className={`${cardClass}`} onClick={toggleCard}>     
         <div id="card-inside">
           <div className="wrap">
-            <p>Happy Birthday, John Doe!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque delectus dolore recusandae eveniet dicta. Corrupti.</p>
+            <p>Hello, Kal.</p>
+            <p>I've never been good at telling people how I feel, but here I am trying for you.</p>
             <p>
-              I hope you have a very blessed birthday!
+              Happiest Birthday yah. <br />
+              I'm wishing you every happiness.
             </p>
             <p>
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, cum.
+             Terima kasih utk semua yang udah kamu lakukan untuk aku.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            May we always be together in the years to come.
             </p>
-            <p className="signed">Jane Doe</p>
+            <p className="signed">Al Diras</p>
           </div>
         </div>
 
         <div id="card-front">
           <div className="wrap">
-            <h1>Happy Birthday!</h1>
+            <h1>untuk kalya</h1>
           </div>
         </div>
     </div>
@@ -65,9 +66,22 @@ function Card() {
         <motion.div className="-mt-[3rem]" initial={{ opacity: 0, visibility: "hidden" }}
         animate={{ opacity: 1, visibility: "visible" }}
         transition={{duration: 1.2}}> 
-        <Link to ='/cake'>
+        <Link to ='/birthday-video'>
         <p className="-mt-[4rem] px-7 py-3 bg-customBlue text-white font-medium text-base rounded-full hover:bg-blue-600">
-            Next Page
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
           </p>
         </Link>
             
