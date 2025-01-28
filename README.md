@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Birthday Website (mobile version)
 
 ### Installation
@@ -26,3 +27,6 @@
 npm run build
 ```
 The production-ready files will be generated in the _dist_ directory.
+=======
+# kalya
+>>>>>>> 2e7810d82d4a2f86fad1a0773add08ee6111fddd
