@@ -109,7 +109,7 @@ function Cake() {
               </defs>
               <text fontSize="40" fill="white" textAnchor="middle">
                 <textPath href="#curve" startOffset="50%">
-                  Selamat ulang taun Kalyaa
+                  Happy Birthday <br /> Kalyaa
                 </textPath>
               </text>
             </svg>
