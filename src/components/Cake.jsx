@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "../assets/css/cake.css";
-import { CakeSVG, confetti } from '../assets';
+import { CakeSVG, confetti } from "../assets";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom'; 
+import { Link } from "react-router-dom";
 
 function Cake() {
   const [candlesBlownOut, setCandlesBlownOut] = useState(false);
@@ -16,7 +16,9 @@ function Cake() {
 
     async function initBlowDetection() {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
         audioContext = new (window.AudioContext || window.AudioContext)();
         analyser = audioContext.createAnalyser();
         const source = audioContext.createMediaStreamSource(stream);
@@ -26,20 +28,22 @@ function Cake() {
         dataArray = new Uint8Array(bufferLength);
         source.connect(analyser);
 
-        detectBlow(); 
+        detectBlow();
       } catch (error) {
-        console.error('Microphone access denied:', error);
+        console.error("Microphone access denied:", error);
       }
     }
 
     function detectBlow() {
       if (!analyser || !dataArray) return;
       analyser.getByteFrequencyData(dataArray);
-      const lowFrequencyValues = dataArray.slice(0, 15); 
-      const averageLowFrequency = lowFrequencyValues.reduce((sum, value) => sum + value, 0) / lowFrequencyValues.length;
-      
-      const blowThreshold = 100; 
-      const requiredDuration = 1500; 
+      const lowFrequencyValues = dataArray.slice(0, 15);
+      const averageLowFrequency =
+        lowFrequencyValues.reduce((sum, value) => sum + value, 0) /
+        lowFrequencyValues.length;
+
+      const blowThreshold = 100;
+      const requiredDuration = 1500;
 
       if (averageLowFrequency > blowThreshold) {
         if (!blowStartTime) {
@@ -53,7 +57,7 @@ function Cake() {
         }
       }
 
-      requestAnimationFrame(detectBlow); 
+      requestAnimationFrame(detectBlow);
     }
 
     setTimeout(() => {
@@ -73,14 +77,7 @@ function Cake() {
       <div className="bg-black/80 h-screen w-screen flex items-center justify-center overflow-hidden relative">
         {!candlesBlownOut && (
           <div className="absolute top-8 text-center z-20">
-            <h1 className="text-white text-xl font-semibold">
-              🎙️ tiuup lilinnya
-            </h1>
-            {!micPermissionGranted && (
-              <p className="text-white text-sm mt-2">
-                
-              </p>
-            )}
+            <h1 className="text-white text-xl font-semibold">🎙️ Tiup lilinnya</h1>
           </div>
         )}
         {candlesBlownOut && (
@@ -93,26 +90,15 @@ function Cake() {
         )}
         {candlesBlownOut && (
           <motion.div
-            className="absolute top-20 text-white text-3xl font-bold z-50"
+            className="absolute top-20 text-white text-3xl font-bold z-50 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <svg width="800" height="200" viewBox="0 0 400 200">
-              <defs>
-                <path
-                  id="curve"
-                  d="M50,150 Q200,50 350,150"
-                  fill="transparent"
-                  stroke="white"
-                />
-              </defs>
-              <text fontSize="40" fill="white" textAnchor="middle">
-                <textPath href="#curve" startOffset="50%">
-                  Happy Birthday, Kal
-                </textPath>
-              </text>
-            </svg>
+            <div>
+              <p className="text-4xl">Happy Birthday</p>
+              <p className="text-4xl mt-2">Kal</p>
+            </div>
           </motion.div>
         )}
         <div className="relative z-10">
