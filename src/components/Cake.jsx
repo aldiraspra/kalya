@@ -78,7 +78,7 @@ function Cake() {
             </h1>
             {!micPermissionGranted && (
               <p className="text-white text-sm mt-2">
-                Berikan izin akses mikrofon jika diminta.
+                
               </p>
             )}
           </div>
@@ -109,7 +109,10 @@ function Cake() {
               </defs>
               <text fontSize="40" fill="white" textAnchor="middle">
                 <textPath href="#curve" startOffset="50%">
-                  Happy Birthday <br /> Kalyaa
+                  Happy Birthday
+                </textPath>
+                <textPath href="#curve" startOffset="50%">
+                  Kalyaa
                 </textPath>
               </text>
             </svg>
